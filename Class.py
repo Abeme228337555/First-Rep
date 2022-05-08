@@ -1,26 +1,26 @@
-class Car:
-    def __init__(self, fuel, maxspeed):
+class ArmoredBattleship:
+    def __init__(self, fuel, maxprojectilespeed):
         self.fuel = fuel
-        self.maxspeed = maxspeed
+        self.maxprojectilespeed = maxprojectilespeed
     def refuel(self, amount):
         self.fuel += amount
-    def drive(self):
+    def swim(self):
         if self.fuel > 0:
-            print('Driving')
+            print('Swimming')
             self.fuel -= 1
         else:
             print("No fuel")
-polo = Car(10, 140)
-print(polo.fuel)
-print(polo.maxspeed)
-ferrari = Car(15, 290)
-print(ferrari.fuel)
-print(ferrari.maxspeed)
+htypearmoredboat = ArmoredBattleship (20, 220)
+print(htypearmoredboat.fuel)
+print(htypearmoredboat.maxprojectilespeed)
+sentinelarmoredboats = ArmoredBattleship(55, 570)
+print(sentinelarmoredboats.fuel)
+print(sentinelarmoredboats.maxprojectilespeed)
 print('-------------------')
-print(polo.fuel)
-polo.refuel(10)
-print(polo.fuel)
+print(htypearmoredboat.fuel)
+htypearmoredboat.refuel(10)
+print(htypearmoredboat.fuel)
 print('-------------------')
-print(ferrari.fuel)
-ferrari.drive()
-print(ferrari.fuel)
+print(sentinelarmoredboats.fuel)
+sentinelarmoredboats.swim()
+print(sentinelarmoredboats.fuel)
