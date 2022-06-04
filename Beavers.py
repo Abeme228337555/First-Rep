@@ -1,5 +1,9 @@
+import logging
 import random
-
+logging.basicConfig(level=logging.DEBUG,
+                    filename='logs_example.log',
+                    filemode='w',
+                    format='NEW LOG - %(asctime)s - %(levelname)s: %(message)s')
 
 class Beaver:
     def __init__(self, name="Beaver", job=None, home=None, board=None):
